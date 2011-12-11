@@ -61,12 +61,12 @@
 </%def>
 <%def name="main_menu()">
   <ul id="mainmenu">
-    <li class="first"><a href="${tg.url('/')}" class="${('', 'active')[page=='index']}">Home Page</a></li>
-        <li><a href="${tg.url('/?feed=python')}" class="${('', 'active')[page=='about']}">Python</a></li>
-        <li><a href="${tg.url('/?feed=django')}" class="${('', 'active')[page=='environ']}">Django</a></li>
-        <li><a href="${tg.url('/?feed=ruby')}" class="${('', 'active')[page=='data']}">Ruby</a></li>
-		<li><a href="${tg.url('/?feed=rails')}" class="${('', 'active')[page=='data']}">Ruby</a></li>
-		<li><a href="${tg.url('/?feed=scala')}" class="${('', 'active')[page=='data']}">Scala</a></li>
+	<li class="first"><a href="${tg.url('/')}" class="${('', 'active')[page=='index']}">Home Page</a></li>
+    <li><a href="${tg.url('/?feed=python')}" class="${('', 'active')[page=='Python']}">Python</a></li>
+    <li><a href="${tg.url('/?feed=django')}" class="${('', 'active')[page=='Django']}">Django</a></li>
+    <li><a href="${tg.url('/?feed=ruby')}" class="${('', 'active')[page=='Ruby']}">Ruby</a></li>
+	<li><a href="${tg.url('/?feed=rails')}" class="${('', 'active')[page=='Rails']}">Rails</a></li>
+	<li><a href="${tg.url('/?feed=scala')}" class="${('', 'active')[page=='Scala']}">Scala</a></li>
   </ul>
 </%def>
 </html>
