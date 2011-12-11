@@ -1,15 +1,11 @@
 # -*- coding: utf-8 -*-
 """Main Controller"""
 
-from tg import expose, flash, require, url, request, redirect
-from tg.i18n import ugettext as _, lazy_ugettext as l_
-from tgredis.model import DBSession, metadata
-
+from tg import expose
 from tgredis.lib.base import BaseController
 from tgredis.controllers.error import ErrorController
 
 __all__ = ['RootController']
-
 
 class RootController(BaseController):
     """
@@ -33,18 +29,3 @@ class RootController(BaseController):
         """Handle the front-page."""
         return dict(page='index')
 
-    @expose('tgredis.templates.about')
-    def about(self):
-        """Handle the 'about' page."""
-        return dict(page='about')
-
-    @expose('tgredis.templates.environ')
-    def environ(self):
-        """This method showcases TG's access to the wsgi environment."""
-        return dict(environment=request.environ)
-
-    @expose('tgredis.templates.data')
-    @expose('json')
-    def data(self, **kw):
-        """This method showcases how you can use the same controller for a data page and a display page"""
-        return dict(params=kw)
